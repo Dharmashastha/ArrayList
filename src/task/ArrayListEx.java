@@ -30,7 +30,7 @@ return size;
 }
 
 					//program 2
-public List addString(List addArray,String name[]) throws Exception
+/*public List addString(List addArray,String name[]) throws Exception
 {
 	checkArrayList(addArray);
 for(String stringName: name)
@@ -49,13 +49,14 @@ for(int numberInt:number)
 	addArray.add(numberInt);
 }
 return addArray;
-}
+}*/
 
 					//program 4
-public List addCustom(List addArray,Object arrayObj) throws Exception
+public List addCustom(List addArray,Object[] arrayObj) throws Exception
 {
 	checkArrayList(addArray);
-	addArray.add(arrayObj);
+	addArray.addAll(Arrays.asList(arrayObj));
+//Collections.addAll(addArray,arrayObj);
 return addArray;
 }
 
@@ -78,16 +79,12 @@ public int addFindIndex(List addArray,String input) throws Exception
 return index;	
 }
 					//program 7
-public List addIterator(List addArray) throws Exception
+/*public List addIterator(List addArray) throws Exception
 {
 	checkArrayList(addArray);
 	Iterator iter=addArray.iterator();
-while(iter.hasNext())
-{
-	iter.next();
-}
 return addArray;
-}
+}*/
 
 					//program 8
 public String addIndex(List addArray,int index) throws Exception
@@ -107,7 +104,7 @@ return stringName;
 public int addDuplicatesFirst(List addArray,String input) throws Exception
 {
 	checkArrayList(addArray);
-	int position=addArray.lastIndexOf(input);
+	int position=addArray.indexOf(input);
 return position;
 }
 
@@ -115,7 +112,7 @@ return position;
 public int addDuplicatesLast(List addArray,String input) throws Exception
 {
 	checkArrayList(addArray);
-	int position=addArray.indexOf(input);
+	int position=addArray.lastIndexOf(input);
 return position;
 }
 					//program 10
@@ -138,7 +135,7 @@ public List addSubArrayList(List addArray,List addSubArray,int position1,int pos
 	int size=arraySize(addArray);
 if(size > position1)
    {
-	addSubArray = (ArrayList)addArray.subList(position1,position2);
+	addSubArray = (List)addArray.subList(position1,position2);
    }
 return addSubArray;
 }
@@ -147,17 +144,17 @@ public List addThirdArrayList(List addArray,List addSubArray) throws Exception
 {
 	checkArrayList(addArray);
 	checkArrayList(addSubArray);
-	addArray.addAll(addSubArray);
+	//addArray.addAll(addSubArray);
 	addSubArray.addAll(addArray);
 return addSubArray;
 }
 
 					//program 13
-public List addThirdArray(List addArray,List addSubArray) throws Exception
+/*public List addThirdArray(List addArray,List addSubArray) throws Exception
 {
 	checkArrayList(addArray);
 	checkArrayList(addSubArray);
-	addSubArray.addAll(addArray);
+	//addSubArray.addAll(addArray);
 	addArray.addAll(addSubArray);
 return addArray;
 }
@@ -170,8 +167,7 @@ for(double decimal:value)
 	addArray.add(decimal);
 }
 return addArray;
-}
-
+}*/
 					//program 14
 public List remove(List addArray,double check) throws Exception
 {
@@ -188,7 +184,7 @@ public List removePosition(List addArray,int index) throws Exception
 return addArray;
 }
 
-					//program 17
+					//program 16
 public List removeElement(List addArray,List addSubArray) throws Exception
 {
 	checkArrayList(addArray);
@@ -197,7 +193,7 @@ public List removeElement(List addArray,List addSubArray) throws Exception
 return addArray;
 }
 
-					//program 18
+					//program 17
 public List removeElements(List addArray,List addSubArray) throws Exception
 {
 	checkArrayList(addArray);
@@ -207,9 +203,8 @@ public List removeElements(List addArray,List addSubArray) throws Exception
 return addArray;
 }
 
-
 					
-public List addLong(List addArray,long value[]) throws Exception
+/*public List addLong(List addArray,long value[]) throws Exception
 {
 	checkArrayList(addArray);
 for(long values : value)
@@ -217,15 +212,16 @@ for(long values : value)
 	addArray.add(values);
 }
 return addArray;
-}
-				//program 19
-public void removeAll(List addArray) throws Exception
+}*/
+				//program 18
+public List removeAll(List addArray) throws Exception
 {
 	checkArrayList(addArray);
 	addArray.clear();
+return addArray;
 }
 
-					//program 20
+					//program 19
 public boolean addCheckString(List addArray,String stringName) throws Exception
 {
 	checkArrayList(addArray);

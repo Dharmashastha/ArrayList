@@ -39,9 +39,9 @@ System.out.println(e.getMessage()+"Skipping the string input is prohibited");
 }
 }
 
-public String[] getStringArray(int num){
+public Object[] getStringArray(int num){
 System.out.println("Enter the String:");
-String [] strArray=new String[num];
+Object [] strArray=new Object[num];
 for(int i=0;i<num;i++)
 {
 strArray[i]=sc.nextLine();
@@ -49,29 +49,44 @@ strArray[i]=sc.nextLine();
 return strArray;
 }
 
-public int[] getIntArray(int num){
+public Object[] getObject(int num){
 System.out.println("Enter the Number:");
-int [] intArray=new int[num];
+Object [] objArray=new Object[num];
+for(int i=0;i<num;i++)
+{
+objArray[i]=new Object[i];
+}
+return objArray;
+}
+
+
+public Object[] getIntArray(int num){
+System.out.println("Enter the Number:");
+Object [] intArray=new Object[num];
 for(int i=0;i<num;i++)
 {
 intArray[i]=sc.nextInt();
 }
+sc.nextLine();
 return intArray;
 }
 
-public double[] getdoubleArray(int num){
+
+
+public Object[] getDoubleArray(int num){
 System.out.println("Enter the Double:");
-double [] douArray=new double[num];
+Object [] douArray=new Object[num];
 for(int i=0;i<num;i++)
 {
 douArray[i]=sc.nextDouble();
 }
+sc.nextLine();
 return douArray;
 }
 
-public long[] getlongArray(int num){
+public Object[] getLongArray(int num){
 System.out.println("Enter the Long:");
-long [] longArray=new long[num];
+Object [] longArray=new Object[num];
 for(int i=0;i<num;i++)
 {
 longArray[i]=sc.nextLong();
@@ -81,9 +96,9 @@ return longArray;
 
 public int getNumber(){
 int number=0;
-//sc.nextLine();
 try{
-System.out.println("Enter the Number:");
+//sc.nextLine();
+//System.out.println("Enter the Number:");
 String stringNumber=sc.nextLine();
 if(stringNumber == null||stringNumber.isEmpty()){
 throw new Exception("Number can't be empty and null  ");
@@ -95,6 +110,25 @@ System.out.println(e.getMessage()+"Skipping the number input is prohibited");
 }
 return number;
 }
+
+
+public double getDouble(){
+double number=0.00;
+//sc.nextLine();
+try{
+System.out.println("Enter the Number:");
+String stringNumber=sc.nextLine();
+if(stringNumber == null||stringNumber.isEmpty()){
+throw new Exception("Number can't be empty and null  ");
+}
+number=Double.parseDouble(stringNumber);
+}
+catch(Exception e){
+System.out.println(e.getMessage()+"Skipping the number input is prohibited");
+}
+return number;
+}
+
 
 public char getCharacter(){
 char character=' ';
