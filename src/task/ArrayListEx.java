@@ -22,9 +22,9 @@ return start;
 }
 
 					//program 1
-public int arraySize(List sizeArray)
+public int arraySize(List sizeArray) throws Exception
 {
-	//checkArrayList(sizeArray);
+	checkArrayList(sizeArray);
 	int size=sizeArray.size();
 return size;
 }
