@@ -6,7 +6,7 @@ import task.*;
 public class HashMapEx
 {
 
-public Map createHashMap()
+public Map<Object,Object> createHashMap()
 {
 	Map<Object,Object> start=new HashMap<Object,Object>();
 return start;
@@ -53,48 +53,45 @@ return check;
 }
 
 				//program 10
-public Map<Object,Object> changeValue(Map<Object,Object> addMap,Map<Object,Object> addSubMap) throws CheckException
+/*public Map<Object,Object> changeValue(Map<Object,Object> addMap,Map<Object,Object> addSubMap) throws CheckException
 {
 	nullCheckMap(addMap);
 	nullCheckMap(addSubMap);
-	addSubMap.putAll(addMap);
-return addSubMap;
-}
-
-
-/*public Map<Object,Object> changeValue(Map<Object,Object> addMap,Map<Object,Object> addSubMap,object objectNewValue) throws CheckException
-{
-	nullCheckMap(addMap);
-	nullCheckMap(addSubMap);
-	Object objectKey=addMap.keySet();
-	addSubMap.put(objectKey,objectNewValue);
 	addSubMap.putAll(addMap);
 return addSubMap;
 }*/
 
 
-				//program 11
-public Map<Object,Object> getValue(Map<Object,Object> addMap,Object objectKey) throws CheckException
+/*public Map<Object,Object> changeValue(Map<Object,Object> addMap,Map<Object,Object> addSubMap,Object objectNewValue) throws CheckException
 {
 	nullCheckMap(addMap);
-	addMap.get(objectKey);
-return addMap;
+	nullCheckMap(addSubMap);
+	Object objectKey=addMap.keySet();
+	addSubMap.put(objectKey,objectNewValue);
+	//addSubMap.putAll(addMap);
+return addSubMap;
+}*/
+
+
+				//program 11
+public Object getValue(Map<Object,Object> addMap,Object objectKey) throws CheckException
+{
+	nullCheckMap(addMap);
+return addMap.get(objectKey);
 }
 
 				//program 12
-public Map<Object,Object> getNonValue(Map<Object,Object> addMap,Object objectKey,Object objectValue) throws CheckException
+/*public Object getNonValue(Map<Object,Object> addMap,Object objectKey) throws CheckException
 {
 	nullCheckMap(addMap);
-	addMap.getOrDefault(objectKey,objectValue);
-return addMap;
-}
+return addMap.get(objectKey);
+}*/
 
 				//program 13
-public Map<Object,Object> returnValue(Map<Object,Object> addMap,Object objectKey,Object objectValue) throws CheckException
+public Object returnValue(Map<Object,Object> addMap,Object objectKey,Object objectValue) throws CheckException
 {
 	nullCheckMap(addMap);
-	addMap.putIfAbsent(objectKey,objectValue);
-return addMap;
+return addMap.getOrDefault(objectKey,objectValue);
 }
 
 				//program 14

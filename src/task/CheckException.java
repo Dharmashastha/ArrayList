@@ -2,8 +2,8 @@ package task;
 
 public class CheckException extends Exception
 {
-public CheckException(String massage)
+public CheckException(String message)
 {
- super(massage);
+ super(message);
 }
 } 
