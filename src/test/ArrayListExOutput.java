@@ -49,7 +49,6 @@ try{
 	output=arrayCall.addCustom(output,array);
 	System.out.println("ArrayList is : "+output);
 	System.out.println("ArrayList Size: "+arrayCall.arraySize(output));
-
    }
    catch(Exception e)
    {

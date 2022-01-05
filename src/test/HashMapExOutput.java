@@ -6,20 +6,43 @@ import java.util.Scanner;
 
 public class HashMapExOutput
 {
+Scanner scan=new Scanner(System.in);
+HashMapEx mapCall=new HashMapEx();
+private  Map<Object,Object> stringValues() throws CheckException
+{
+	Map<Object,Object> output=mapCall.createHashMap();
+	System.out.println("how many keys strings&values you want to append poda Venna payalae");
+	int stored=scan.nextInt();
+	scan.nextLine();
+	for(int iter=0;iter < stored;iter++)
+	{
+		System.out.println("Enter the Key");
+		Object objectKey=scan.nextLine();
+		System.out.println("Enter the Value");
+		Object objectValue=scan.nextLine();
+		output=mapCall.addValues(output,objectKey,objectValue);
+	}
+	return output;
+}
+
 public static void main(String []args)
 {
-
+HashMapExOutput mapOutputCall=new HashMapExOutput();
+//Map<Object,Object> output=new HashMap<Object,Object>();
+Map<Object,Object> subOutput=new HashMap<Object,Object>();
+//Scanner scan=new Scanner(System.in);
+Scanner scan=new Scanner(System.in);
 HashMapEx mapCall=new HashMapEx();
 Map<Object,Object> output=new HashMap<Object,Object>();
-Map<Object,Object> subOutput=new HashMap<Object,Object>();
-Scanner scan=new Scanner(System.in);
-
-
-int number=0;
 int stored=0;
-//int subStored=0;
 Object objectKey;
 Object objectValue;
+
+int number=0;
+//int stored=0;
+//int subStored=0;
+//Object objectKey;
+//Object objectValue;
 
 System.out.println("Enter the Case:");
 try
@@ -30,6 +53,7 @@ catch(Exception e)
 {
 	System.out.println("Skipping the input is prohibited");
 }
+
 switch(number)
 {
 case 1:
@@ -45,18 +69,7 @@ try
     break;
 case 2:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	
@@ -200,18 +213,7 @@ try{
     break;
 case 8:
 try{    
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	System.out.println("Enter check the Key");
@@ -228,18 +230,7 @@ try{
     break;
 case 9:
 try{    
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	System.out.println("Enter check the Value");
@@ -286,18 +277,7 @@ try{
     break;
 case 11:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	System.out.println("Enter the Key");
@@ -313,18 +293,7 @@ try{
     break;
 case 12:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	System.out.println("Enter the Key");
@@ -340,18 +309,7 @@ try{
     break;
 case 13:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	System.out.println("Enter the Key");
@@ -369,18 +327,7 @@ try{
     break;
 case 14:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	System.out.println("Enter the Key");
@@ -396,18 +343,7 @@ try{
     break;
 case 15:
 try{    
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	System.out.println("Enter the Key");
@@ -425,18 +361,7 @@ try{
     break;
 case 16:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	System.out.println("Enter the Key");
@@ -454,18 +379,7 @@ try{
     break;
 case 17:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	System.out.println("Enter the Key");
@@ -485,18 +399,7 @@ try{
     break;
 case 18:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	subOutput=mapCall.createHashMap();
@@ -511,18 +414,8 @@ try{
     break;
 case 19:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
+	System.out.println("Hashmap is: "+output);
 	Iterator iter=output.entrySet().iterator();
 	while(iter.hasNext())
 	{
@@ -536,18 +429,7 @@ try{
     break;
 case 20:
 try{
-	output=mapCall.createHashMap();
-	System.out.println("how many keys strings&values you want to append");
-	stored=scan.nextInt();
-	scan.nextLine();
-	for(int iter=0;iter < stored;iter++)
-	{
-		System.out.println("Enter the Key");
-		objectKey=scan.nextLine();
-		System.out.println("Enter the Value");
-		objectValue=scan.nextLine();
-		output=mapCall.addValues(output,objectKey,objectValue);
-	}
+	output=mapOutputCall.stringValues();
 	System.out.println("Hashmap is: "+output);
 	System.out.println("HashMap Size: "+mapCall.mapSize(output));
 	output=mapCall.removeAll(output);
